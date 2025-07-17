@@ -2,24 +2,38 @@ import "./style.css";
 import javascriptLogo from "./javascript.svg";
 import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.js";
+import jQuery from "jquery";
+import { popper } from "@popperjs/core";
+import { Chart } from "chart.js";
+import Datatable from "datatables.net-bs5";
+import DataTables from "datatables.net";
 
-document.querySelector("#app").innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <h2>OUMAR</h2>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`;
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "./css/sb-admin-2.min.css"; // or "./css/sb-admin-2.min.css"
+
+import $ from "jquery";
+import "bootstrap";
+import "jquery.easing";
+import DataTable from "datatables.net-bs5";
+import "datatables.net";
+import { Chart } from "chart.js";
+
+$(function () {
+  $("#dataTable").DataTable({
+    ajax: {
+      url: "https://ex1new.onrender.com/get-data",
+      dataSrc: "", // Use "data" if your endpoint returns { data: [...] }
+    },
+    columns: [
+      { data: "id", title: "ID" },
+      { data: "name", title: "NAME" },
+      { data: "enrollid", title: "ENROLLID" },
+      { data: "created_at", title: "CREATED_AT" },
+    ],
+    responsive: true,
+  });
+});
+
 
 setupCounter(document.querySelector("#counter"));
