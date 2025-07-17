@@ -1,13 +1,3 @@
-import "./style.css";
-import javascriptLogo from "./javascript.svg";
-import viteLogo from "/vite.svg";
-import { setupCounter } from "./counter.js";
-import jQuery from "jquery";
-import { popper } from "@popperjs/core";
-import { Chart } from "chart.js";
-import Datatable from "datatables.net-bs5";
-import DataTables from "datatables.net";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./css/sb-admin-2.min.css"; // or "./css/sb-admin-2.min.css"
