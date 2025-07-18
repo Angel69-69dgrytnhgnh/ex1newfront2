@@ -26,4 +26,4 @@ $(function () {
 });
 
 
-setupCounter(document.querySelector("#counter"));
+
